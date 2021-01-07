@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <!-- 外部盒子 -->
+    <div class="wrap">
+        <!-- 顶部logo -->
+        <div class="logo"><a href="#"><img src="../images/login1.jpg" alt=""></a></div>
+        <!-- 内容详情 -->
+        <div class="main clearfix">
+           <div class="container">
+            <div class="banner">
+                <a href="javascript:;"><img src="../images/login4_03.jpg" alt=""></a>
+            </div>
+            <!-- 注册和登录 -->
+            <form action="" class="reg_login">
+                <div class="select">
+                    <a href="javascript:;" class="light">账号登录</a>
+                    <span></span>
+                    <a href="javascript:;">扫码登录</a>
+                </div>
+               <div class="box1" style="display: block;">
+                <input type="text" placeholder="邮箱/手机号码小米ID" id="un">
+                <input type="password" placeholder="密码" id="ps">
+                <input type="button" value="登录" id="log">
+                <a href="#" class="reg">手机短信登录/注册</a>
+                <p class="p1">
+                    <a href="#">立即注册</a>
+                    <span>|</span>
+                    <a href="#">忘记登录?</a>
+                </p>
+                <div class="icon clearfix">
+                    <a href="#"><i class="iconfont icon-iconfonticonfontweibo"></i></a>
+                    <a href="#"><i class="iconfont icon-iconfonticonfontweibo"></i></a>
+                    <a href="#"><i class="iconfont icon-iconfonticonfontweibo"></i></a>
+                    <a href="#"><i class="iconfont icon-iconfonticonfontweibo"></i></a>
+                </div>
+               </div>
+               <div class="box1" id="box">
+                <img src="../images/erweima2_03.jpg" alt="">
+            </div>
+            </form>
+           </div>
+        </div>
+        <!-- 尾部 -->
+        <div class="footer">
+            <img src="../images/login2.jpg" alt="">
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+    <script src="../lib/jquery/jquery1.12.4.min.js"></script>
+    <script>
+        $('#log').click(function(){
+            $.ajax({
+                url:"../api/login.json",
+                data:{
+                    un:$("#un").val(),
+                    ps:$("#ps").val()
+                },
+                dataType:"json",
+                success:function(res){
+                    if(res.code==1){
+                        localStorage.setItem("name",$("#un").val())
+                        location.href="./index.html"
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</html>

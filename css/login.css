@@ -1,0 +1,111 @@
+.container{
+    width: 1226px;
+    min-width: 1226px;
+    margin: 0 auto;
+}
+.main{
+    padding-top: 32px;
+    background: #e3fdfe;
+}
+.banner{
+    float: left;
+}
+.reg_login{
+    width: 368px;
+    height: 529px;
+    float: left;
+    background: #ffffff;
+    padding: 28px 30px 0;
+    position: relative;
+}
+.reg_login>#box{
+    position: absolute;
+    top: 58px;
+}
+.reg_login>.box1{
+    display: none;
+}
+.select{
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 22px;
+}
+.select>a{
+    display: inline-block;
+}
+.select>.light{
+    color: #ff6700;
+}
+
+.select>span{
+    display: inline-block;
+    width: 2px;
+    height: 30px;
+    background: #e0e0e0;
+    margin: 0 40px;
+    vertical-align: middle;
+}
+input{
+     display: block;
+     height: 46px;
+     width: 362px;
+     border: none;
+     border: 1px solid #cccccc;
+     text-indent: 1em;
+}
+input[type="password"]{
+    margin-top: 14px;
+}
+input[type="button"]{
+    height: 50px;
+    width: 370px;
+    border: none;
+    background: #ff6700;
+    margin-top: 24px;
+    color: #ffffff;
+}
+.reg{
+    display: block;
+    height: 38px;
+    color: #ff6700;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.p1{
+    line-height: 16px;
+    text-align: center;
+    color: #999999;
+}
+.icon{
+   padding: 0 46px;
+   margin-top: 146px;
+}
+.icon>a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #7ccf91;
+    border-radius: 50%;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 17px;
+}
+.icon>a>i{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+    
+
+
+
+
+
+

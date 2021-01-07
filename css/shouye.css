@@ -1,0 +1,364 @@
+.container{
+    width: 1226px;
+    min-width: 1226px;
+    margin: 0 auto;
+}
+.topBar{
+    height: 40px;
+    background: #333333;
+}
+.topBar_list{ 
+    float: left;
+}
+.topBar_list>a{
+    height: 40px;
+    font-size: 12px; 
+    display: inline-block;  
+    line-height: 40px;
+}
+.topBar_list>span{
+    font-size: 12px; 
+    line-height: 40px;
+    color: #393e3e;  
+    margin: 0 8px;
+}
+.shop{
+    float: right;
+    line-height: 40px;
+    padding: 0 20px 0 15px;
+    color: #b0b0b0;
+}
+.shop:hover{
+    cursor: pointer;
+    background: #424242;
+}
+.shop>span{
+    color: #b0b0b0;
+    font-size: 16px;
+    line-height: 16px;
+}
+.shop>i{
+    font-size: 12px;
+}
+.login{
+    float: right;
+}
+.login>a{
+    display: inline-block;
+    line-height: 40px;
+}
+/* 导航栏 */
+.header_top{
+    height: 100px;
+}
+.logo{
+    float: left;
+    margin-top: 22px;
+}
+.logo>a{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+}
+.header_top .nav{
+    float: left;
+    font-size: 14px;
+    margin-left: 178px;
+}
+.header_top .nav>li{
+    float: left;
+}
+.header_top .nav>li>a{
+    display: inline-block;
+    padding: 0 10px;
+    margin-top: 40px;
+    color: #333333;
+}
+.header_top .serch{
+    float: right;
+    vertical-align: middle;
+    margin-top: 25px;
+}
+.header_top .serch>input{
+    float: left;
+    border: none;
+    width: 234px;
+    height: 44px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+}
+.header_top .serch>button{
+    float: left;
+    border: none;
+    width: 50px;
+    height: 48px;
+    border: 1px solid #cccccc;
+}
+/* 主页内容 */
+.nav_left{
+    float: left; 
+    padding: 20px 0 28px 0;
+    background: #504f5e;
+    position: relative;
+}
+.nav_left>li{
+    width: 234px;
+}
+
+.nav_left>li:hover{
+    background: #ff6700;
+}
+.nav_left>li:nth-child(1):hover .xiao_mi{
+    display: block;
+}
+.nav_left>li>a{
+    display: inline-block;
+    width: 204px;
+    margin-left: 28px;
+    height: 42px;
+    line-height: 42px;
+    color: #ffffff;
+    position: relative;
+}
+.nav_left>li>a::after{
+    content: ">";
+    position: absolute;
+    right: 20px;
+}
+.xiao_mi{
+    position: absolute;
+    z-index: 999;
+    left: 234px;
+    top: 0px;
+    height: 468px;
+    width: 992px;
+    background: skyblue;
+    display: none;
+}
+.banner{
+    float: left;
+    width: 992px;
+    height: 468px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+.main_buttom{
+    margin-top: 14px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+/* 内容详情 */
+.main_inner{
+    background: #f5f5f5;
+}
+.box_hd{
+    line-height: 40px;
+    padding-top: 12px;
+    margin-bottom: 9px;
+}
+.box_hd>h2{
+    float: left;
+    font-size: 20px;
+}
+.box_hd .find{
+   float: right;
+}
+.box_hd .find :nth-child(1){
+   display: inline-block;
+   width: 34px;
+   height: 22px;
+   border: 2px solid #cccccc;
+   text-align: center;
+   line-height: 22px;
+   vertical-align: bottom;
+}
+.box_hd .find :nth-child(2){
+    display: inline-block;
+    width: 34px;
+    height: 22px;
+    border-top: 2px solid #cccccc;
+    border-right: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    text-align: center;
+    line-height: 22px;
+    vertical-align: bottom;
+ }
+ .box_md>ul{
+     display: flex;
+     justify-content: space-between;
+ }
+ .box_md>ul>li>a{
+     display: block;
+ }
+ .box_md>ul li:nth-child(1){
+     width: 234px;
+     height: 340px;
+     background-color: #f1eded;
+ } 
+ .box_bd>a{
+     display: block;
+     margin-top: 22px;
+     margin-bottom: 20px;
+ }
+ .down_time{
+     margin-top: 32px;
+     text-align: center;
+ }
+ .down_time>span{
+      display: inline-block;
+      width: 46px;
+      height: 46px;
+      background: #605751;
+ }
+ .down_time>i{
+     display: inline-block;
+     vertical-align: top;
+     margin-top: 10px;
+ }
+ .down_time>span>em{
+     display: inline-block;
+     line-height: 46px;
+     color: #ffffff;
+     font-size: 16px;
+ }
+ .box_me .mi11{
+     float: left;
+ }
+ .box_me .mi11>a{
+     display: block;
+ }
+
+ .box_me .iphone_img{
+     float: right;
+     display: flex;
+     width: 978px;
+     height: 614px;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     align-content: space-between;
+ }
+ .box_me .iphone_img>li>a{
+     display: block;
+ }
+ /* 尾部 */
+ .after_sale{
+     height: 79px;
+     border-bottom: 1px solid #cccccc;
+ }
+ .after_sale>li{
+     float: left;
+     text-align: center;
+     font-size: 16px;
+     height: 26px;
+     width: 19.9%;
+     line-height: 26px;
+     margin-top: 26px;
+     border-right: 1px solid #e0e0e0;
+ }
+ .after_sale>li:last-child{
+     border: none;
+ }
+ .after_sale>li>a>i{   
+     font-size: 22px; 
+     vertical-align: -3px;
+     margin-right: 6px;
+ }
+ .menu{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.menu>dl{
+    float: left;
+    width: 162px;
+    font-size: 12px;
+    color: #757575;
+}
+.menu>dl>dt{
+    margin-bottom: 20px;
+    color: black;
+}
+.menu>dl>dd{
+    line-height: 28px;
+}
+.chat{
+    width: 253px;
+    float: right;
+    height: 112px;
+    border-left: 1px solid #cccccc;
+    font-size: 12px;
+    text-align: center;
+}
+.chat>span{
+    display: inline-block;
+    font-size: 18px;
+    color: #ff6700;
+    line-height: 22px;
+}
+.chat .p1{
+    line-height: 29px;
+    text-align: center;
+}
+.chat>a{
+    display: block;
+    width: 118px;
+    height: 28px;
+    border: 1px solid #ff6700;
+    line-height: 28px;
+    margin: 0 auto 8px;
+    color: #ff6700;
+}
+.chat>a>i{
+    vertical-align: -2px;
+    margin-right: 4px;
+}
+.chat .p2>a>i{
+    vertical-align: -2px;
+    margin-right: 4px;
+}
+.copyright{
+    background: #fafafa;
+}
+.fixd_icon{
+    position: fixed;
+    right: 70px;
+    bottom: 80px;
+}
+.fixd_icon>ul>li>a{
+    display: block;
+    width: 24px;
+    height: 40px;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    text-align: center;
+    background: #ffffff;
+    line-height: 40px;
+}
+.fixd_icon>ul>li:last-child>a{
+    border-bottom: 1px solid #cccccc;
+}
+.fixd_icon>ul>li>a>i{
+    font-size: 22px;
+}
+.top{
+    position: fixed;
+    right: 70px;
+    bottom: 25px
+}
+.top>a{
+   display: block;
+}
+
+
+
+
+
+
+
+
+
+
