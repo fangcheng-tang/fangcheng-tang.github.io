@@ -1,0 +1,128 @@
+.container{
+    width: 1226px;
+    min-width: 1226px;
+    margin: 0 auto;
+}
+.main{
+    background: #f5f5f5;
+    border-top: 1px solid #f5f5f5;
+}
+.wrap_cart{
+    margin-top: 25px;
+}
+.wrap_cart>.active{
+    background: #f5f5f5;
+    height: 46px;
+}
+.wrap_cart>.active>span{
+    float: right;
+    line-height: 46px;
+}
+.wrap_cart>.active>span>i{
+    color: #ff6700;
+}
+.thead{
+    height: 70px;
+    background: #ffffff;
+    padding-right: 26px;
+}
+.thead>div{
+    float: left;
+    line-height: 70px;
+}
+.thead>.check{
+    width: 110px;
+}
+.thead>.img{
+    width: 120px;
+}
+.thead>.name{
+    width: 380px;
+}
+.thead>.price{
+    width: 148px;
+    padding-right: 10px;
+}
+.thead>.num{
+    width: 150px;
+}
+.thead>.total{
+    width: 120px;
+    padding-right: 81px;
+}
+.thead>.action{
+    width: 80px;
+}
+.box{
+    line-height: 87px;
+    height: 87px;
+    padding: 15px 26px 15px 0;
+    border-top: 1px solid #cccccc;
+    background: #ffffff;
+}
+.box>div{
+    float: left;
+}
+.box>.check{
+    width: 110px;
+}
+.box>.img{
+    width: 80px;
+    padding-right: 40px;
+}
+.box>.name{
+    width: 380px;
+}
+.box>.price{
+    width: 158px;
+}
+.box>.num{
+    width: 150px;
+}
+.box>.total{
+    width: 201px;
+    padding: 22px 0;
+}
+.box>.total>#delete{
+    text-align: center;
+    font-size: 22px;
+    float: left;
+    width: 37px;
+    height: 36px;
+    border-left: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    line-height: 36px;
+}
+.box>.total>#add{
+    font-size: 22px;
+    text-align: center;
+    float: left;
+    width: 37px;
+    height: 36px;
+    border-right: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    line-height: 36px;
+}
+.box>.total>input{
+    float: left;
+    border: none;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    width: 68px;
+    height: 34px;
+    vertical-align: middle;
+}
+.box>.action{
+    width: 80px;
+}
+.jie_suan{
+    margin-top: 20px;
+}
+
+
+
+
+
+

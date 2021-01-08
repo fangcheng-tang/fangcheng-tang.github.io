@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <!-- 顶部标题 -->
+    <div class="top_log">
+        <div class="container">
+            <img src="../images/title_02.jpg" alt="">
+        </div>
+    </div>
+    <!-- 购物车主要内容 -->
+    <div class="main">
+        <div class="container">
+            <div class="wrap_cart">
+                <!-- 活动 -->
+                <div class="active">
+                    <span>小米发货商品(不含有品)满99元免运费，还需<i>59.3元</i> 去凑单</span>
+                </div>
+                <!-- 表格 -->
+                <div class="table">
+                    <div class="thead">
+                        <div class="check"><input type="checkbox"> 全选</div>
+                        <div class="img"> &nbsp;</div>
+                        <div class="name">商品名称</div>
+                        <div class="price">单价</div>
+                        <div class="num">数量</div>
+                        <div class="total">小计</div>
+                        <div class="action">操作</div>
+                    </div>
+                    <!-- <div class="box">
+                        <div class="check"><input type="checkbox"></div>
+                        <div class="img"><img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1480066629.77799920.jpg?thumb=1&w=80&h=80" alt=""></div>
+                        <div class="name">小米二合-数据线100cm 白色</div>
+                        <div class="price">19.9元</div>
+                        <div class="num">数量</div>
+                        <div class="total">
+                            <a href="javascript:;" id="delete">-</a><input type="text"><a href="javascript:;" id="add">+</a>
+                        </div>
+                        <div class="action">操作</div>
+                    </div> -->
+                    <div class="box1">
+                        <div class="box">
+                            <div class="check"><input type="checkbox"></div>
+                            <div class="img"><img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1480066629.77799920.jpg?thumb=1&w=80&h=80" alt=""></div>
+                            <div class="name">小米二合-数据线100cm 白色</div>
+                            <div class="price">19.9元</div>
+                            <div class="num">数量</div>
+                            <div class="total">
+                                <a href="javascript:;" id="delete">-</a><input type="text"><a href="javascript:;" id="add">+</a>
+                            </div>
+                            <div class="action">操作</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;"  style="display: none;" data-total="1" id="add1" data-img="../images/shujuxian.jpg" data-id="231232" data-name="小米-二合-数据线100cm 白色" data-price="132" data-num="11">加入购物车</a><a href="#">喜欢</a>
+                <!-- 结算 -->
+                <div class="jie_suan">
+                    <img src="../images/www.mi_03.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/jquery/jquery1.12.4.min.js"></script>
+    <script>
+        // 公共方法
+        function getCart(){
+            var list = localStorage.getItem('cart')||"[]"; //字符串
+            return JSON.parse(list);
+        }
+        function setCart(arr){
+
+            localStorage.setItem('cart',JSON.stringify(arr))
+        }
+        // 1 购物车页面一打开就要展示该用户的购物车商品列表
+        showList()
+        function showList(){
+            var productList = getCart();
+            if(productList.length<1){
+                $('.box1').hide();
+                return;
+            }
+            $('.box1').empty();
+            $.each(productList,function(index,product){
+                console.log(product)
+                $('.box1').append(`<div class="box"> <div class="check"><input type="checkbox"></div>
+                        <div class="img"><img src="${product.product_img}" alt=""></div>
+                        <div class="name">${product.product_name}</div>
+                        <div class="price">${product.product_price}</div>
+                        <div class="num">${product.product_num}</div>
+                        <div class="total">
+                            <a href="javascript:;" id="delete">-</a><input type="text" value="${product.product_total}"><a href="javascript:;" id="add" class="add">+</a>
+                        </div>
+                        <div class="action">删除</div></div>
+                `)
+            })
+        }
+        // 点击增加数量
+        $('.box1').on('click','.add',function(){
+            
+            var that = $(this);
+            console.log(parseInt(that.prev().val()))
+            that.prev().val((parseInt(that.prev().val())+1))
+            var newProduct = {
+                product_id:$('#add1').data('id'),
+                product_name:$('#add1').data('name'),
+                product_img:$('#add1').data('img'),
+                product_price:$('#add1').data('price'),
+                product_num:$('#add1').data('num'),
+                product_total:$('#add1').data('total')
+
+            };
+            // 先获取原来的商品列表数组
+            var productList = getCart();
+            // 把新商品添加进去
+            productList.push(newProduct);//如果有同id商品，不能直接push，要把num增加
+            // 存回本地存储
+            setCart(productList)
+        })        
+        // 3 用户点击删除可以删除当前商品,删除完成后要重新渲染table/h2
+        
+    </script>
+</body>
+</html>
